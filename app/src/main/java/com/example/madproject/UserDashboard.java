@@ -72,12 +72,13 @@ public class UserDashboard extends AppCompatActivity{
         category = findViewById(R.id.cat);
 
 
+        catimgList.add(R.drawable.tutorial);
+        catimgList.add(R.drawable.geo);
+        catimgList.add(R.drawable.mathematics);
         catimgList.add(R.drawable.politics);
         catimgList.add(R.drawable.law);
         catimgList.add(R.drawable.sports);
-        catimgList.add(R.drawable.sports);
-        catimgList.add(R.drawable.sports);
-        catimgList.add(R.drawable.sports);
+
 
 
 

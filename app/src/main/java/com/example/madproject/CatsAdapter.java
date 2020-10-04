@@ -99,14 +99,12 @@ public class CatsAdapter extends BaseAdapter {
             }
         });
 
-        ImageView x = view.findViewById(R.id.x);
-
-        x.setOnClickListener(new View.OnClickListener() {
+        view.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View view) {
+            public boolean onLongClick(View view) {
 
                 delQuiz(position);
-
+                return false;
             }
         });
 
