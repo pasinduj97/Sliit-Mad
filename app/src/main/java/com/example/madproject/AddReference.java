@@ -23,17 +23,20 @@ public class AddReference extends AppCompatActivity {
     EditText edtv,eddes;
     TextView adddata;
 
+    String gid,title,des;
+
     private FirebaseFirestore firestore;
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_reference);
+
+        gid=getIntent().getStringExtra("id");
+
+
 
       edtv=findViewById(R.id.editTextTextPersonName);
       eddes=findViewById(R.id.edid);
@@ -43,6 +46,22 @@ public class AddReference extends AppCompatActivity {
       firestore = FirebaseFirestore.getInstance();
 
 
+        if(gid!=null)
+        {
+            title=getIntent().getStringExtra("title");
+            des=getIntent().getStringExtra("des");
+
+            eddes.setText(""+des);
+            edtv.setText(""+title);
+
+
+            ReferenceModel rf=new ReferenceModel();
+            rf.setId(gid);
+            rf.setTitle(title);
+            rf.setDescription(des);
+
+
+        }
 
 
         adddata.setOnClickListener(new View.OnClickListener() {
@@ -70,18 +89,39 @@ public class AddReference extends AppCompatActivity {
                     rf.setTitle(title);
                     rf.setDescription(description);
 
-                    firestore.collection("references").document(id).set(rf).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            Toast.makeText(AddReference.this, "Added", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(AddReference.this,ManageReference.class));
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(AddReference.this, "Try again", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    if(gid!=null)
+                    {
+                        firestore.collection("references").document(gid).set(rf).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(AddReference.this, "Added", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(AddReference.this,ManageReference.class));
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(AddReference.this, "Try again", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }else
+                    {
+                        firestore.collection("references").document(id).set(rf).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(AddReference.this, "Added", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(AddReference.this,ManageReference.class));
+                            }
+                        }).addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(AddReference.this, "Try again", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+
+
+
+
                 }
 
             }
