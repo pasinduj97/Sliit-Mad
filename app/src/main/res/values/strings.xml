@@ -69,6 +69,7 @@
     <string name="update">Update</string>
     <string name="adddesc">Add Description</string>
     <string name="editdesc">Edit Description</string>
+    <string name="addtitile">Add Title</string>
 
 
 </resources>
