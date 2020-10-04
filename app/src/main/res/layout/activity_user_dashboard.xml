@@ -74,23 +74,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="13dp"
                 android:fontFamily="@font/robotobold"
                 android:text="@string/username"
                 android:textColor="@color/usernamecolor"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 />
 
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/refbutton"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:elevation="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/setsbackgroundtint"
+            android:elevation="100dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageV"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+
+
+                app:srcCompat="@drawable/refi" />
+
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/ref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-                android:layout_marginTop="22dp"
-                android:fontFamily="@font/robotoregular"
-                android:text="@string/location"
-                android:textSize="10dp"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/robotobold"
+                android:text="References"
+                android:textColor="@color/usernamecolor"
+                android:textSize="16dp"
                 />
+
+
 
 
 
@@ -111,7 +154,7 @@
 
         android:background="@color/userprobackground"
         android:elevation="100dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
 
 
         >

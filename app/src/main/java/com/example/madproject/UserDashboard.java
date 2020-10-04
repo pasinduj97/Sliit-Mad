@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -51,6 +52,7 @@ public class UserDashboard extends AppCompatActivity{
     private String userId;
     private GridView category;
     private ImageView addNewCat;
+    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -68,6 +70,7 @@ public class UserDashboard extends AppCompatActivity{
         loader.show();
 
 
+        cardView = findViewById(R.id.refbutton);
 
         category = findViewById(R.id.cat);
 
@@ -103,6 +106,14 @@ public class UserDashboard extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(UserDashboard.this,UserAddCat.class);
+                startActivity(intent);
+            }
+        });
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserDashboard.this,ReferenceUser.class);
                 startActivity(intent);
             }
         });

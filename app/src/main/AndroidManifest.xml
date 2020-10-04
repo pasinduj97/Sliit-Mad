@@ -11,8 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserAddCat"></activity>
-        <activity android:name=".adminHome"></activity>
+        <activity android:name=".ReferenceUser"></activity>
+        <activity android:name=".UserAddCat" />
+        <activity android:name=".adminHome" />
+        <activity android:name=".ManageCategories" />
+        <activity android:name=".ManageSetsAdmin" />
+        <activity android:name=".ManageQuestion" />
+        <activity android:name=".AdQuestionDetailsActivity" />
         <activity android:name=".SelectUser" />
         <activity android:name=".UserLogin" />
         <activity android:name=".QuestionActivity" />
@@ -33,7 +38,7 @@
         </activity>
         <activity
             android:name=".Login"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Register"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

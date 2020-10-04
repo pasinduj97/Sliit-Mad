@@ -101,9 +101,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         questionList.clear();
 
-        Log.i("q",String.valueOf(firestore.collection("QUIZ").document(
-                "RCH7ax1jnWXfqme7jqED").collection(setsIDs.get(setNo))
-                .get()));
+
 
         firestore.collection("quiz").document(catList.get(selected_cat_index).getIds()).collection(setsIDs.get(setNo))
                 .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
