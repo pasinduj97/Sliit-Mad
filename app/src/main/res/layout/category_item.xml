@@ -8,8 +8,8 @@
     android:layout_height="wrap_content"
 
     android:layout_weight="1"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="10dp"
+
+
     android:elevation="15dp"
 
 
@@ -28,10 +28,10 @@
         <ImageView
 
             android:id="@+id/catimg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="204dp"
+            android:layout_height="125dp"
 
-            android:src="@drawable/science"
+            android:src="@drawable/tutorial"
 
             app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="MissingConstraints"></ImageView>
@@ -50,23 +50,12 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.653" />
+            app:layout_constraintVertical_bias="0.632" />
 
-        <ImageView
-            android:id="@+id/x"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            app:layout_constraintBottom_toBottomOf="@+id/catimg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.892"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/catimg"
-            app:layout_constraintVertical_bias="0.074"
-            app:srcCompat="@drawable/delicon" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -156,7 +156,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/plusfinal"
+            android:src="@drawable/newplus"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="25dp"
             tools:ignore="MissingConstraints"></ImageView>
