@@ -37,5 +37,3 @@ git push
 > Please get a pull using `git pull` command, Before you start working everyday.
 
 > Try you best to work only on your files. Do not changes other's files if it's unnecessary. Because it may cause conflicts. 
-
-> If you face any issues when push your changes, Please contact **Mahadi** or **Banujan**.
