@@ -70,6 +70,8 @@
     <string name="adddesc">Add Description</string>
     <string name="editdesc">Edit Description</string>
     <string name="addtitile">Add Title</string>
+    <string name="edit">Edit</string>
+    <string name="Delete">Delete</string>
 
 
 </resources>
