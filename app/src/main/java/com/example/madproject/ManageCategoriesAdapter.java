@@ -39,14 +39,14 @@ public class ManageCategoriesAdapter extends RecyclerView.Adapter<ManageCategori
 
     @NonNull
     @Override
-    public ManageCategoriesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup , int i) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup , int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_manage_categories_item,viewGroup,false);
 
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ManageCategoriesAdapter.ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
 
         String title = manage_cat_list.get(position).getName();
         viewHolder.setData(title,position,this);

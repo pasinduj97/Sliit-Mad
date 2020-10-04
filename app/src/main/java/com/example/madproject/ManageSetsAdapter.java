@@ -31,6 +31,7 @@ import java.util.Map;
 import static com.example.madproject.ManageCategories.manage_cat_list;
 import static com.example.madproject.ManageCategories.selected_cat_index;
 import static com.example.madproject.ManageSetsAdmin.selected_set_index;
+
 public class ManageSetsAdapter extends RecyclerView.Adapter<ManageSetsAdapter.ViewHolder>{
     private List<String> setIDs;
 
@@ -40,13 +41,13 @@ public class ManageSetsAdapter extends RecyclerView.Adapter<ManageSetsAdapter.Vi
 
     @NonNull
     @Override
-    public ManageSetsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup ViewGroup, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup ViewGroup, int viewType) {
         View view = LayoutInflater.from(ViewGroup.getContext()).inflate(R.layout.activity_manage_sets_admin_item,ViewGroup,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ManageSetsAdapter.ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         String setID = setIDs.get(position);
         viewHolder.setData(position, setID, this);
     }
@@ -82,7 +83,7 @@ public class ManageSetsAdapter extends RecyclerView.Adapter<ManageSetsAdapter.Vi
 
                     selected_set_index = position;
 
-                    Intent intent = new Intent(itemView.getContext(),ManageQuestion.class);
+                    Intent intent = new Intent(itemView.getContext(), ManageQuestion.class);
                     itemView.getContext().startActivity(intent);
                 }
             });

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:background="@drawable/dialog_background"
     android:layout_height="match_parent"
-    tools:context=".AddNewQuestion">
+    tools:context=".AdQuestionDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/set_toolbar"
+        android:id="@+id/set_toolbar_admin_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="Add New Question"
@@ -23,22 +23,25 @@
         app:navigationIcon="@drawable/backwardarrow" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="409dp"
+        android:layout_height="611dp"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="55dp"
+        tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            app:cardElevation="10dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="40dp">
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            app:cardElevation="10dp">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <EditText
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/robotobold"
                 android:hint="@string/question"
                 android:padding="20dp"
@@ -50,121 +53,119 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            app:cardElevation="10dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="250dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="320dp"
-            >
+            app:cardElevation="10dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/option1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/robotobold"
                 android:hint="@string/option1"
-                android:textSize="14dp"
+                android:padding="10dp"
                 android:textColorHint="@color/navheadcol"
-                />
+                android:textSize="14dp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            app:cardElevation="10dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="310dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="400dp"
-            >
+            app:cardElevation="10dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/option2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/robotobold"
                 android:hint="@string/option2"
-                android:textSize="14dp"
+                android:padding="10dp"
                 android:textColorHint="@color/navheadcol"
-                />
+                android:textSize="14dp" />
         </androidx.cardview.widget.CardView>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            app:cardElevation="10dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="370dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="480dp"
-            >
+            app:cardElevation="10dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/option3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/robotobold"
                 android:hint="@string/option3"
-                android:textSize="14dp"
+                android:padding="10dp"
                 android:textColorHint="@color/navheadcol"
-                />
+                android:textSize="14dp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            app:cardElevation="10dp"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="430dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginTop="560dp"
-            >
+            app:cardElevation="10dp">
 
-            <TextView
+            <EditText
                 android:id="@+id/option4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="@font/robotobold"
                 android:hint="@string/option4"
-                android:textSize="14dp"
+                android:padding="10dp"
                 android:textColorHint="@color/navheadcol"
-                />
+                android:textSize="14dp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="630dp"
-            android:layout_marginRight="40dp"
-            app:cardBackgroundColor="@color/navheadcol"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="25dp" >
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="40dp"
+            app:cardElevation="10dp">
 
-            <RelativeLayout
+            <EditText
+                android:id="@+id/answer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textRegister"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/breeserifregular"
-                    android:text="@string/add"
-                    android:textColor="@color/categorytextcolor"
-                    android:textSize="25dp"
-                    android:padding="10dp"
-                    android:layout_centerHorizontal="true"
-                    />
-            </RelativeLayout>
-
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotobold"
+                android:hint="Answer"
+                android:padding="10dp"
+                android:textColorHint="@color/navheadcol"
+                android:textSize="14dp" />
         </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/addQB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/navheadcol"
+        android:text="Add Question"
+        android:textColor="@color/cardbg"
+        android:fontFamily="@font/robotobold"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

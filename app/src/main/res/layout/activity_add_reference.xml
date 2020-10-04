@@ -68,16 +68,17 @@
             android:background="@drawable/custom_input"
             android:gravity="top"
             android:inputType="textMultiLine"
-            android:textDirection="firstStrongRtl"
-            android:typeface="normal"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
             app:layout_constraintBottom_toTopOf="@+id/registerBtn"
             app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintHorizontal_bias="0.536"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.212"
-
-            />
+            app:layout_constraintVertical_bias="0.212" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/registerBtn"
@@ -117,6 +118,8 @@
             android:background="@drawable/custom_input"
             android:ems="10"
             android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
